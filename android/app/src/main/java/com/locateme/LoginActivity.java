@@ -14,15 +14,10 @@ public class LoginActivity extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        setResult(1, new Intent().putExtra("LoginActivityResult", "Return from LoginActivity3"));
                         finish();
                     }
                 }
         );
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        setResult(1, new Intent().putExtra("LoginActivityResult", "Return from LoginActivity"));
     }
 }
