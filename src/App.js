@@ -1,4 +1,11 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, { Component } from 'react';
+import { Text } from 'react-native';
+import ActivityStarterModule from './ActivityStarter'
 
-export default () => <Text>Hello React</Text>
+export default class App extends Component {
+  render() {
+    return (
+      <Text>Hello world!</Text>
+    );
+  }
+}
