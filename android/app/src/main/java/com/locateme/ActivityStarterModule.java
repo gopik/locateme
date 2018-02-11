@@ -28,7 +28,7 @@ public class ActivityStarterModule extends ReactContextBaseJavaModule {
                 @Override
                 public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
                     if ((requestCode == 1) && (resultCode == 1)) {
-                        activityResultCallback.invoke(data.getStringExtra("LoginActivityResult"));
+                        activityResultCallback.invoke(data.getStringExtra("idToken"));
                     }
                 }
 
