@@ -26,7 +26,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         // Use client id for web instead of android to avoid audience issues
         googleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.web_client_id))
+                .addApi(Auth.GOOGLE_SIGN_IN_API,
+                        new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                                .requestIdToken(getString(R.string.web_client_id))
                         .requestEmail()
                         .build())
                 .build();
